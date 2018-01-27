@@ -5,7 +5,7 @@ LDFLAGS ?= -lX11
 
 PREFIX ?= /usr/local
 BINDIR ?= $(PREFIX)/bin
-MANDIR ?= $(PREFIX)/man/man1
+MANDIR ?= $(PREFIX)/share/man/man1
 
 all: xgetres
 
