@@ -13,10 +13,10 @@ xgetres: xgetres.c
 	$(CC) $(CFLAGS) $(LDFLAGS) $? -o $@
 
 install: xgetres
-	mkdir -p $(DESTDIR)$(BINDIR)
-	install $< $(DESTDIR)$(BINDIR)
-	mkdir -p $(DESTDIR)$(MANDIR)
-	install -m 644 xgetres.1 $(DESTDIR)$(MANDIR)/xgetres.1
+	mkdir -p $(BINDIR)
+	install $< $(BINDIR)
+	mkdir -p $(MANDIR)
+	install -m 644 xgetres.1 $(MANDIR)/xgetres.1
 
 clean:
 	rm -f xgetres
