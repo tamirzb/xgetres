@@ -1,7 +1,8 @@
 VERSION ?= 1.0
 
-CFLAGS ?= -O2 -Wall -Werror -DVERSION=\"$(VERSION)\"
-LDFLAGS ?= -lX11
+CPPFLAGS := -DVERSION=\"$(VERSION)\" $(CPPFLAGS)
+CFLAGS ?= -O2 -Wall -Werror
+LDFLAGS := -lX11 $(LDFLAGS)
 
 PREFIX ?= /usr/local
 BINDIR ?= $(PREFIX)/bin
@@ -10,7 +11,7 @@ MANDIR ?= $(PREFIX)/share/man/man1
 all: xgetres
 
 xgetres: xgetres.c
-	$(CC) $(CFLAGS) $(LDFLAGS) $? -o $@
+	$(CC) $(CPPFLAGS) $(CFLAGS) $(LDFLAGS) $? -o $@
 
 install: xgetres
 	mkdir -p $(BINDIR)
