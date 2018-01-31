@@ -14,9 +14,9 @@ xgetres: xgetres.c
 
 install: xgetres
 	mkdir -p $(BINDIR)
-	install $< $(BINDIR)
+	install -D $< $(BINDIR)
 	mkdir -p $(MANDIR)
-	install -m 644 xgetres.1 $(MANDIR)/xgetres.1
+	install -Dm 644 xgetres.1 $(MANDIR)/xgetres.1
 
 clean:
 	rm -f xgetres
