@@ -11,7 +11,7 @@ MANDIR ?= $(PREFIX)/share/man/man1
 all: xgetres
 
 xgetres: xgetres.c
-	$(CC) $(CPPFLAGS) $(CFLAGS) $(LDFLAGS) $? -o $@
+	$(CC) $(CPPFLAGS) $(CFLAGS) $? -o $@ $(LDFLAGS)
 
 install: xgetres
 	mkdir -p $(BINDIR)
