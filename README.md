@@ -25,4 +25,6 @@ Then in order to install, run:
     $ sudo make install
 
 Installation location is determined by the `PREFIX` variable
-(`/usr/local` by default).
+(`/usr/local` by default), you can specify a different location like this:
+
+    $ sudo make install PREFIX=/app
